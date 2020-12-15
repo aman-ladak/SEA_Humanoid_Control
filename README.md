@@ -11,3 +11,5 @@ The system begins with main.m with the desired y-position and trajectory trackin
 trajectory_generator.m also provides the total simulation time to main.m in order to define the full time-vector for simulation. With the desired y, the system flow then moves into behaviour_controller.m where the outer loop PD controller resides. This controller regulates the robot height based on the error between the desired y-position and the current y-position, and computes the desired leg force (spring force), and the desired motor position to be used in sea_controller.m. 
 
 The system flow then proceeds into sea_controller.m where the inner loop PD controller resides. This controller regulates the motor position based on the error between the desired motor position (θm_des) and the current motor position (θm), and computes the desired motor torque. The desired leg force and desired motor torque then get passed to dynamics.m where the change in current state is computed, required for closed loop control in the following iteration. The state vector is defined by [y; y_dot; θm; θm_dot].
+
+## System Diagram
