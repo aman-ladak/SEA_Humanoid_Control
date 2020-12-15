@@ -13,3 +13,4 @@ trajectory_generator.m also provides the total simulation time to main.m in orde
 The system flow then proceeds into sea_controller.m where the inner loop PD controller resides. This controller regulates the motor position based on the error between the desired motor position (θm_des) and the current motor position (θm), and computes the desired motor torque. The desired leg force and desired motor torque then get passed to dynamics.m where the change in current state is computed, required for closed loop control in the following iteration. The state vector is defined by [y; y_dot; θm; θm_dot].
 
 ## System Diagram
+![system-diagram](https://user-images.githubusercontent.com/76025995/102178895-3ae2c280-3e74-11eb-83ce-00e579d5fc60.jpg)
